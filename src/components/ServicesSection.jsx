@@ -47,7 +47,7 @@ const ServiceDesc = styled.div`
 
 export default function ServicesSection() {
   return (
-    <Section>
+    <Section id="services-section">
       <Title>Our Service Highlights</Title>
       <ServicesGrid>
         <Service>

@@ -13,7 +13,7 @@ const FooterBar = styled.footer`
 export default function Footer() {
   return (
     <FooterBar>
-      &copy; {new Date().getFullYear()} CalmBank. All rights reserved.
+  &copy; {new Date().getFullYear()} JKL Bank. All rights reserved.
     </FooterBar>
   );
 }

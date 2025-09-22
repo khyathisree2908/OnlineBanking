@@ -57,7 +57,7 @@ export default function StepsSection() {
         </Step>
         <Step>
           <StepNum>4</StepNum>
-          <StepText>Start using CalmBank Internet Banking instantly</StepText>
+          <StepText>Start using JKL Bank Internet Banking instantly</StepText>
         </Step>
       </StepsGrid>
     </Section>

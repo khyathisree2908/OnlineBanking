@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../theme';
 
@@ -59,16 +60,21 @@ const HeroImage = styled.div`
 `;
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+  const handleServicesScroll = () => {
+    const el = document.getElementById('services-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Hero>
       <HeroText>
         <HeroTitle>Internet Banking</HeroTitle>
         <HeroDesc>
-          CalmBank Internet Banking is simple, convenient, secure, and lets you carry out a wide range of banking transactions and access numerous features in just a few clicks. Enjoy banking anytime, anywhere.
+          JKL Bank Internet Banking is simple, convenient, secure, and lets you carry out a wide range of banking transactions and access numerous features in just a few clicks. Enjoy banking anytime, anywhere.
         </HeroDesc>
         <ButtonGroup>
-          <Button href="#">Login Now</Button>
-          <Button href="#" style={{background: theme.colors.secondary, color: theme.colors.text}}>Know About Our Services</Button>
+          <Button as="button" onClick={() => navigate('/login')}>Login Now</Button>
+          <Button as="button" onClick={handleServicesScroll} style={{background: theme.colors.secondary, color: theme.colors.text}}>Know About Our Services</Button>
         </ButtonGroup>
       </HeroText>
       <HeroImage>

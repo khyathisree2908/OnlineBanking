@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    # Uncomment if you want to use a custom nginx.conf
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+  backend:
+    build:
+      context: ../onlinebanking-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - NODE_ENV=production
